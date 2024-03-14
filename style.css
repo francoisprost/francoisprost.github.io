@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8b0000; /* Dark Red */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 100;
+    transition: background-color 0.5s;
+}
+
+.navbar a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: color 0.5s;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* Sections styles */
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Home section */
+#home {
+    background-color: #444; /* Gray */
+}
+
+#home h1 {
+    font-size: 3rem;
+}
+
+/* Skills section */
+#skills {
+    background-color: #8b0000; /* Dark Red */
+}
+
+#skills h2 {
+    font-size: 2rem;
+}
+
+/* Experiences section */
+#experiences {
+    background-color: #444; /* Gray */
+}
+
+#experiences h2 {
+    font-size: 2rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 2px;
+    height: 100%;
+    background-color: #8b0000; /* Dark Red */
+    transform: translateX(-50%);
+}
+
+.experience {
+    position: relative;
+    margin: 50px 0;
+    padding-left: 40px;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 20px;
+    height: 20px;
+    background-color: #8b0000; /* Dark Red */
+    border-radius: 50%;
+    border: 2px solid white;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.experience h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.experience p {
+    margin-bottom: 20px;
+}
+
+/* Contact section */
+#contact {
+    background-color: #8b0000; /* Dark Red */
+}
+
+#contact h2 {
+    font-size: 2rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #8b0000;
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label, form input, form textarea, form button {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    transition: background-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    background-color: #fff;
+}
+
+form button {
+    background-color: #8b0000; /* Dark Red */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6b0000; /* Darker Red */
+}
