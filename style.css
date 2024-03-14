@@ -11,6 +11,11 @@ body {
     line-height: 1.6;
 }
 
+.logo{
+    max-width: 60px;
+    transition: 0.2s;
+}
+
 /* Navbar styles */
 .navbar {
     position: fixed;
@@ -29,6 +34,7 @@ body {
     text-decoration: none;
     margin: 0 20px;
     transition: color 0.5s;
+    vertical-align: middle;
 }
 
 .navbar a:hover {
