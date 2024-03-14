@@ -34,7 +34,7 @@ body {
     text-decoration: none;
     margin: 0 20px;
     transition: color 0.5s;
-    display: inline-block;
+    display: -webkit-inline-box;
     vertical-align:middle;
 }
 
