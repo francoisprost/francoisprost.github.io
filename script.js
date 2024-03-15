@@ -12,6 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // When the user scrolls down 50px from the top of the document, resize the header's font size
 window.onscroll = function() {
     growShrinkLogo()
+    scrollFunction()
   };
   
   function growShrinkLogo() {
@@ -20,5 +21,13 @@ window.onscroll = function() {
       Logo.style.width = '30px';
     } else {
       Logo.style.width = '60px';
+    }
+  }
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+      document.getElementById("nom").style.fontSize = "16px";
+    } else {
+      document.getElementById("nom").style.fontSize = "30px";
     }
   }
