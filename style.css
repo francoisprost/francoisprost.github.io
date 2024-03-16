@@ -63,6 +63,7 @@ section {
 /* Home section */
 #home {
     background-color: #444; /* Gray */
+    padding-top: 200px;
 }
 
 #home h1 {
