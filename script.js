@@ -11,23 +11,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // When the user scrolls down 50px from the top of the document, resize the header's font size
 window.onscroll = function() {
-    growShrinkLogo()
-    scrollFunction()
-  };
-  
-  function growShrinkLogo() {
-    var Logo = document.getElementById("logo")
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-      Logo.style.width = '30px';
-    } else {
-      Logo.style.width = '60px';
-    }
-  }
+    handleNavbarShrink();
+};
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-      document.getElementById("nom").style.fontSize = "16px";
+function handleNavbarShrink() {
+    const navbar = document.querySelector('.navbar');
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        navbar.classList.add('scrolled');
     } else {
-      document.getElementById("nom").style.fontSize = "30px";
+        navbar.classList.remove('scrolled');
     }
-  }
+}
+
+// Fonction pour changer la langue
+function toggleLangMenu() {
+    document.getElementById("langDropdown").classList.toggle("show");
+}
+
+// Fermer le menu si on clique ailleurs
+window.onclick = function(event) {
+    if (!event.target.matches('.lang-dropbtn') && !event.target.closest('.lang-dropbtn')) {
+        var dropdowns = document.getElementsByClassName("lang-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function switchLang(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('lang', lang); // Sauvegarde le choix
+    document.getElementById("langDropdown").classList.remove("show");
+}
+
+// Initialisation au chargement de la page
+const savedLang = localStorage.getItem('lang') || 'en';
+document.documentElement.lang = savedLang;
+
+// Animation d'apparition au scroll
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('section').forEach((section) => {
+    observer.observe(section);
+});

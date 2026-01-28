@@ -11,12 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<style>
-    /* Styles pour la gestion des langues */
-    html[lang="en"] .lang-fr { display: none !important; }
-    html[lang="fr"] .lang-en { display: none !important; }
-    .lang-btn { cursor: pointer; margin-left: 10px; background: none; border: 1px solid #ccc; padding: 2px 5px; border-radius: 4px; font-size: 0.8em; }
-</style>
 </head>
 
     <!-- TO DO : personalize template, lang selection (fr eng), lyon video tour background -->
@@ -27,8 +21,8 @@
     <div class="navbar">
         <div class="left-align">
         <a href="#home"><img class="logo" id="logo" src="images/logo.png"></a>
-        <a href="#home" class="nom" id="nom">François Prost</a>
     </div>
+    <div class="right-align">
         <a href="#home" class="lang-en">Home</a>
         <a href="#skills" class="lang-en">Skills</a>
         <a href="#experiences" class="lang-en">Experiences</a>
@@ -36,15 +30,23 @@
         <a href="#skills" class="lang-fr">Compétences</a>
         <a href="#experiences" class="lang-fr">Expériences</a>
         <a href="#contact">Contact</a>
-        <button class="lang-btn" onclick="switchLang('en')">EN</button>
-        <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+        <div class="lang-dropdown">
+            <button onclick="toggleLangMenu()" class="lang-dropbtn" title="Changer de langue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+            </button>
+            <div id="langDropdown" class="lang-content">
+                <a onclick="switchLang('en')">English 🇬🇧</a>
+                <a onclick="switchLang('fr')">Français 🇫🇷</a>
+            </div>
+        </div>
+    </div>
     </div>
     </nav>
     <!-- Home section -->
     <section id="home">
-        <h1 class="lang-en">Who am I ?</h1>
+        <h1 class="lang-en">François PROST</h1>
         <p class="lang-en">Welcome to my test portfolio website. I'm a software engineer with a passion for coding.</p>
-        <h1 class="lang-fr">Qui suis-je ?</h1>
+        <h1 class="lang-fr">François PROST</h1>
         <p class="lang-fr">Bienvenue sur mon site portfolio de test. Je suis un ingénieur logiciel passionné par le code.</p>
     </section>
 
@@ -132,18 +134,6 @@
 
     <!-- JavaScript for smooth scrolling -->
     <script type="text/javascript" src="script.js">
-    </script>
-    <script>
-        // Fonction pour changer la langue
-        function switchLang(lang) {
-            document.documentElement.lang = lang;
-            localStorage.setItem('lang', lang); // Sauvegarde le choix
-        }
-        
-        // Initialisation au chargement de la page
-        // On récupère la langue sauvegardée ou on met 'en' par défaut
-        const savedLang = localStorage.getItem('lang') || 'en';
-        document.documentElement.lang = savedLang;
     </script>
 </body>
 </html>
