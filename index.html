@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    /* Styles pour la gestion des langues */
+    html[lang="en"] .lang-fr { display: none !important; }
+    html[lang="fr"] .lang-en { display: none !important; }
+    .lang-btn { cursor: pointer; margin-left: 10px; background: none; border: 1px solid #ccc; padding: 2px 5px; border-radius: 4px; font-size: 0.8em; }
+</style>
 </head>
 
     <!-- TO DO : personalize template, lang selection (fr eng), lyon video tour background -->
@@ -23,48 +29,70 @@
         <a href="#home"><img class="logo" id="logo" src="images/logo.png"></a>
         <a href="#home" class="nom" id="nom">François Prost</a>
     </div>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#experiences">Experiences</a>
+        <a href="#home" class="lang-en">Home</a>
+        <a href="#skills" class="lang-en">Skills</a>
+        <a href="#experiences" class="lang-en">Experiences</a>
+        <a href="#home" class="lang-fr">Accueil</a>
+        <a href="#skills" class="lang-fr">Compétences</a>
+        <a href="#experiences" class="lang-fr">Expériences</a>
         <a href="#contact">Contact</a>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('fr')">FR</button>
     </div>
     </nav>
     <!-- Home section -->
     <section id="home">
-        <h1>Who am I ?</h1>
-        <p>Welcome to my test portfolio website. I'm a software engineer with a passion for coding.</p>
+        <h1 class="lang-en">Who am I ?</h1>
+        <p class="lang-en">Welcome to my test portfolio website. I'm a software engineer with a passion for coding.</p>
+        <h1 class="lang-fr">Qui suis-je ?</h1>
+        <p class="lang-fr">Bienvenue sur mon site portfolio de test. Je suis un ingénieur logiciel passionné par le code.</p>
     </section>
 
     <!-- Skills section -->
     <section id="skills">
-        <h2>Skills</h2>
-        <p>I have expertise in various programming languages and technologies.</p>
+        <h2 class="lang-en">Skills</h2>
+        <p class="lang-en">I have expertise in various programming languages and technologies.</p>
+        <h2 class="lang-fr">Compétences</h2>
+        <p class="lang-fr">J'ai une expertise dans divers langages de programmation et technologies.</p>
         <!-- Add your skills here -->
     </section>
 
     <!-- Experiences section -->
     <section id="experiences">
-        <h2>Experiences</h2>
+        <h2 class="lang-en">Experiences</h2>
+        <h2 class="lang-fr">Expériences</h2>
         <div class="timeline">
             <div class="experience">
-                <h3>Experience 1</h3>
-                <p>Job description for experience.</p>
-                <p>Year: 2017</p>
+                <h3 class="lang-en">Experience 1</h3>
+                <p class="lang-en">Job description for experience.</p>
+                <p class="lang-en">Year: 2017</p>
+                <h3 class="lang-fr">Expérience 1</h3>
+                <p class="lang-fr">Description du poste pour l'expérience.</p>
+                <p class="lang-fr">Année : 2017</p>
             </div>
             <div class="experience">
-                <h3>Experience 2</h3>
-                <p>Job description for experience 2.</p>
-                <p>Year: 2018</p>
+                <h3 class="lang-en">Experience 2</h3>
+                <p class="lang-en">Job description for experience 2.</p>
+                <p class="lang-en">Year: 2018</p>
+                <h3 class="lang-fr">Expérience 2</h3>
+                <p class="lang-fr">Description du poste pour l'expérience 2.</p>
+                <p class="lang-fr">Année : 2018</p>
             </div>
             <div class="experience">
-                <h3>Experience 3</h3>
-                <p>Job description for experience 3.</p>
-                <p>Year: 2019</p>
+                <h3 class="lang-en">Experience 3</h3>
+                <p class="lang-en">Job description for experience 3.</p>
+                <p class="lang-en">Year: 2019</p>
+                <h3 class="lang-fr">Expérience 3</h3>
+                <p class="lang-fr">Description du poste pour l'expérience 3.</p>
+                <p class="lang-fr">Année : 2019</p>
             </div>
             <div class="experience">
-                <h3>Experience 4</h3>
-                <p>Job description for experience 4.</p>
-                <p>Year: 2020</p>
+                <h3 class="lang-en">Experience 4</h3>
+                <p class="lang-en">Job description for experience 4.</p>
+                <p class="lang-en">Year: 2020</p>
+                <h3 class="lang-fr">Expérience 4</h3>
+                <p class="lang-fr">Description du poste pour l'expérience 4.</p>
+                <p class="lang-fr">Année : 2020</p>
             </div>
         </div>
     </section>
@@ -74,7 +102,8 @@
         <h2>Contact</h2>
         <div>
             <form>
-                <label for="name">Name</label>
+                <label for="name" class="lang-en">Name</label>
+                <label for="name" class="lang-fr">Nom</label>
                 <input type="text" id="name" name="name" required>
 
                 <label for="email">Email</label>
@@ -83,23 +112,38 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
 
-                <button type="submit">Send</button>
+                <button type="submit" class="lang-en">Send</button>
+                <button type="submit" class="lang-fr">Envoyer</button>
             </form>
         </div>
         <div>
-            <p>Connect with me on social media:</p>
+            <p class="lang-en">Connect with me on social media:</p>
+            <p class="lang-fr">Retrouvez-moi sur les réseaux sociaux :</p>
             <!-- Add your social media links here -->
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        <span class="lang-en"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></span>
+        <span class="lang-fr"><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></span>
         <p>&copy; 2023 Fracsy</p>
     </footer>
 
     <!-- JavaScript for smooth scrolling -->
     <script type="text/javascript" src="script.js">
+    </script>
+    <script>
+        // Fonction pour changer la langue
+        function switchLang(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('lang', lang); // Sauvegarde le choix
+        }
+        
+        // Initialisation au chargement de la page
+        // On récupère la langue sauvegardée ou on met 'en' par défaut
+        const savedLang = localStorage.getItem('lang') || 'en';
+        document.documentElement.lang = savedLang;
     </script>
 </body>
 </html>
