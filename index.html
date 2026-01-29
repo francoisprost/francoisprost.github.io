@@ -103,7 +103,7 @@
     <section id="contact">
         <h2>Contact</h2>
         <div>
-            <form>
+            <form action="https://formspree.io/f/francoisdelyon3@hotmail.fr" method="POST">
                 <label for="name" class="lang-en">Name</label>
                 <label for="name" class="lang-fr">Nom</label>
                 <input type="text" id="name" name="name" required>
@@ -118,22 +118,137 @@
                 <button type="submit" class="lang-fr">Envoyer</button>
             </form>
         </div>
-        <div>
-            <p class="lang-en">Connect with me on social media:</p>
-            <p class="lang-fr">Retrouvez-moi sur les réseaux sociaux :</p>
-            <!-- Add your social media links here -->
+        <div class="social-container">
+            <a href="https://github.com/francoisprost" target="_blank" class="social-icon" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/fran%C3%A7ois-prost-6380231b2/?locale=en-US" target="_blank" class="social-icon lang-en" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/fran%C3%A7ois-prost-6380231b2/?locale=fr-FR" target="_blank" class="social-icon lang-fr" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <span class="lang-en"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></span>
-        <span class="lang-fr"><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></span>
-        <p>&copy; 2023 Fracsy</p>
+        <span class="lang-en"><a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a> | <a href="#" onclick="openModal('termsModal'); return false;">Terms of Service</a></span>
+        <span class="lang-fr"><a href="#" onclick="openModal('privacyModal'); return false;">Politique de confidentialité</a> | <a href="#" onclick="openModal('termsModal'); return false;">Conditions d'utilisation</a></span>
+        <p>François Prost &copy; 2026 </p>
     </footer>
 
     <!-- JavaScript for smooth scrolling -->
     <script type="text/javascript" src="script.js">
     </script>
+
+    <!-- Modals -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+            
+            <!-- Version Anglaise -->
+            <div class="lang-en">
+                <h2>Privacy Policy</h2>
+                <p><strong>Last updated: January 2026</strong></p>
+                
+                <h3>1. Data Controller</h3>
+                <p>The data controller is <strong>François Prost</strong>.<br>
+                Contact: francoisdelyon3@hotmail.fr</p>
+
+                <h3>2. Data Collected</h3>
+                <p>We only collect personal data that you voluntarily provide via the contact form:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Email address</li>
+                    <li>Message content</li>
+                </ul>
+
+                <h3>3. Purpose of Processing</h3>
+                <p>Your data is collected solely to respond to your inquiries and discuss potential professional opportunities.</p>
+
+                <h3>4. Third-Party Services & Hosting</h3>
+                <p>This site uses <strong>Formspree</strong> to handle form submissions. By sending a message, you acknowledge that the information you provide will be transferred to Formspree for processing in accordance with their Privacy Policy.</p>
+                <p>This site is hosted on <strong>GitHub Pages</strong> (GitHub Inc.).</p>
+
+                <h3>5. Your Rights (GDPR)</h3>
+                <p>You have the right to access, rectify, or erase your personal data. To exercise these rights, please contact me at the email address provided above.</p>
+            </div>
+
+            <!-- Version Française -->
+            <div class="lang-fr">
+                <h2>Politique de confidentialité</h2>
+                <p><strong>Dernière mise à jour : Janvier 2026</strong></p>
+                
+                <h3>1. Responsable du traitement</h3>
+                <p>Le responsable du traitement des données est <strong>François Prost</strong>.<br>
+                Contact : francoisdelyon3@hotmail.fr</p>
+
+                <h3>2. Données collectées</h3>
+                <p>Nous collectons uniquement les données personnelles que vous fournissez volontairement via le formulaire de contact :</p>
+                <ul>
+                    <li>Nom</li>
+                    <li>Adresse email</li>
+                    <li>Contenu du message</li>
+                </ul>
+
+                <h3>3. Finalité du traitement</h3>
+                <p>Vos données sont collectées uniquement dans le but de répondre à vos demandes et d'échanger sur d'éventuelles opportunités professionnelles.</p>
+
+                <h3>4. Services tiers et Hébergement</h3>
+                <p>Ce site utilise <strong>Formspree</strong> pour gérer les envois de formulaires. Les données transitent par ce service sécurisé.</p>
+                <p>Ce site est hébergé sur <strong>GitHub Pages</strong> (GitHub Inc.).</p>
+
+                <h3>5. Vos droits (RGPD)</h3>
+                <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, veuillez me contacter à l'adresse email indiquée ci-dessus.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('termsModal')">&times;</span>
+            
+            <!-- Version Anglaise -->
+            <div class="lang-en">
+                <h2>Terms of Service & Legal Notice</h2>
+                
+                <h3>1. Legal Information</h3>
+                <p><strong>Owner & Editor:</strong> François Prost<br>
+                <strong>Contact:</strong> francoisdelyon3@hotmail.fr</p>
+
+                <h3>2. Hosting</h3>
+                <p>This website is hosted by <strong>GitHub Inc.</strong><br>
+                Address: 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States.</p>
+
+                <h3>3. Intellectual Property</h3>
+                <p>All content present on this site (texts, images, code snippets, logos) is the exclusive property of François Prost, unless otherwise stated. Any reproduction, distribution, modification, adaptation, retransmission, or publication, even partial, of these various elements is strictly prohibited without the express written consent of the owner.</p>
+
+                <h3>4. Limitation of Liability</h3>
+                <p>The information contained on this site is as accurate as possible and the site is periodically updated, but may contain inaccuracies or omissions. The owner cannot be held responsible for omissions, inaccuracies, and deficiencies in the update.</p>
+                <p>This site contains hyperlinks to other websites. However, the owner does not have the possibility to verify the content of the sites thus visited, and consequently assumes no liability for this fact.</p>
+            </div>
+
+            <!-- Version Française -->
+            <div class="lang-fr">
+                <h2>Conditions d'utilisation & Mentions Légales</h2>
+                
+                <h3>1. Informations légales</h3>
+                <p><strong>Propriétaire & Éditeur :</strong> François Prost<br>
+                <strong>Contact :</strong> francoisdelyon3@hotmail.fr</p>
+
+                <h3>2. Hébergement</h3>
+                <p>Ce site est hébergé par <strong>GitHub Inc.</strong><br>
+                Adresse : 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
+
+                <h3>3. Propriété intellectuelle</h3>
+                <p>Tout le contenu présent sur ce site (textes, images, extraits de code, logos) est la propriété exclusive de François Prost, sauf mention contraire. Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit du propriétaire.</p>
+
+                <h3>4. Limitation de responsabilité</h3>
+                <p>Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement remis à jour, mais peut toutefois contenir des inexactitudes ou des omissions. Le propriétaire ne pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour.</p>
+                <p>Ce site contient des liens hypertextes vers d'autres sites. Cependant, le propriétaire n'a pas la possibilité de vérifier le contenu des sites ainsi visités, et n'assumera en conséquence aucune responsabilité de ce fait.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

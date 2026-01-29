@@ -28,7 +28,7 @@ function toggleLangMenu() {
     document.getElementById("langDropdown").classList.toggle("show");
 }
 
-// Fermer le menu si on clique ailleurs
+// Fermer le menu ou les modales si on clique ailleurs
 window.onclick = function(event) {
     if (!event.target.matches('.lang-dropbtn') && !event.target.closest('.lang-dropbtn')) {
         var dropdowns = document.getElementsByClassName("lang-content");
@@ -39,6 +39,29 @@ window.onclick = function(event) {
             }
         }
     }
+
+    // Gestion fermeture modales au clic extérieur
+    if (event.target.classList.contains('modal')) {
+        closeModalWithAnimation(event.target);
+    }
+}
+
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    document.body.classList.add("no-scroll");
+}
+
+function closeModal(modalId) {
+    closeModalWithAnimation(document.getElementById(modalId));
+}
+
+function closeModalWithAnimation(modal) {
+    modal.classList.add('hide');
+    setTimeout(() => {
+        modal.style.display = "none";
+        modal.classList.remove('hide');
+        document.body.classList.remove("no-scroll");
+    }, 300);
 }
 
 function switchLang(lang) {

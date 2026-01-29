@@ -26,6 +26,10 @@ body {
     overflow-x: hidden;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .logo{
     height: 50px;
     width: auto;
@@ -223,8 +227,8 @@ h2::after {
     z-index: 1;
 }
 
-.experience:nth-child(odd)::after { right: -11.5%; }
-.experience:nth-child(even)::after { left: -11.5%; }
+.experience:nth-child(odd)::after { right: calc(-11.11% - 8px); }
+.experience:nth-child(even)::after { left: calc(-11.11% - 8px); }
 
 .experience h3 {
     color: var(--accent-color);
@@ -233,12 +237,16 @@ h2::after {
 }
 
 /* Contact section */
+#contact {
+    padding-bottom: 50px;
+}
+
 footer {
     background-color: var(--surface-color);
     padding: 40px 0;
     text-align: center;
     border-top: 1px solid #333;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 footer a {
@@ -323,8 +331,127 @@ html[lang="fr"] .lang-en { display: none !important; }
     .timeline::before { left: 30px; }
     .experience { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left !important; }
     .experience:nth-child(even) { left: 0; }
-    .experience::after { left: 21px !important; }
+    .experience::after { left: 23px !important; right: auto !important; }
     .navbar { padding: 15px 20px; }
     .navbar a { margin-left: 10px; font-size: 0.8rem; }
     #nom { font-size: 1.2rem; }
+}
+
+/* Social Media Icons */
+.social-icon {
+    display: inline-block;
+    margin: 15px 5px;
+    color: var(--text-main);
+    transition: transform 0.3s, color 0.3s;
+}
+.social-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+.social-icon:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.social-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background-color: var(--surface-color);
+    margin: 10% auto; 
+    padding: 40px;
+    border: 1px solid #333;
+    width: 80%; 
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    position: relative;
+    color: var(--text-main);
+    animation: slideIn 0.3s ease-out;
+}
+
+.modal-content h3 {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--white);
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+.modal-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    list-style-type: disc;
+    color: var(--text-muted);
+}
+
+.close {
+    color: var(--text-muted);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideOut {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-50px); opacity: 0; }
+}
+
+.modal.hide {
+    animation: fadeOut 0.3s ease-in forwards;
+}
+
+.modal.hide .modal-content {
+    animation: slideOut 0.3s ease-in forwards;
 }
