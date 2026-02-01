@@ -231,7 +231,7 @@ h2::after {
 /* Experiences section */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -279,13 +279,52 @@ h2::after {
     z-index: 1;
 }
 
-.experience:nth-child(odd)::after { right: calc(-11.11% - 8px); }
-.experience:nth-child(even)::after { left: calc(-11.11% - 8px); }
+.experience:nth-child(odd)::after { right: calc(-11.11% - 12px); }
+.experience:nth-child(even)::after { left: calc(-11.11% - 12px); }
 
 .experience h3 {
     color: var(--accent-color);
     font-size: 1.3rem;
     margin-bottom: 5px;
+}
+
+.experience .company {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 2px;
+}
+
+.experience .years {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.experience .description {
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.experience .skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.experience:nth-child(odd) .skills-used {
+    justify-content: flex-end;
+}
+
+.experience .skill-tag {
+    background-color: rgba(139, 0, 0, 0.15);
+    border: 1px solid var(--accent-color);
+    color: var(--text-main);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
 }
 
 /* Contact section */
@@ -383,6 +422,7 @@ html[lang="fr"] .lang-en { display: none !important; }
 @media screen and (max-width: 768px) {
     .timeline::before { left: 30px; }
     .experience { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left !important; }
+    .experience:nth-child(odd) .skills-used { justify-content: flex-start; }
     .experience:nth-child(even) { left: 0; }
     .experience::after { left: 23px !important; right: auto !important; }
     .navbar { padding: 15px 20px; }
