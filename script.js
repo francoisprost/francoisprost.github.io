@@ -90,3 +90,77 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach((section) => {
     observer.observe(section);
 });
+
+// Gestion des filtres de compétences
+const filterBtns = document.querySelectorAll('.filter-btn');
+const skillCards = document.querySelectorAll('.skill-card');
+let filterTimeout;
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Gestion de la classe active
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        clearTimeout(filterTimeout);
+
+        // 1. Identifier s'il y a des éléments à cacher pour gérer le délai
+        let hasItemsToHide = false;
+
+        skillCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const shouldBeVisible = (filterValue === 'all' || category === filterValue);
+
+            if (!shouldBeVisible && card.style.display !== 'none') {
+                hasItemsToHide = true;
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.8)';
+            }
+        });
+
+        // 2. Appliquer les changements après le délai (si nécessaire)
+        const delay = hasItemsToHide ? 400 : 0;
+
+        filterTimeout = setTimeout(() => {
+            skillCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const shouldBeVisible = (filterValue === 'all' || category === filterValue);
+
+                if (shouldBeVisible) {
+                    if (card.style.display === 'none') {
+                        card.style.display = 'block';
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                    }
+                    // Force reflow
+                    void card.offsetWidth;
+                    
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }, delay);
+    });
+});
+
+// Animation des barres de compétences au scroll
+const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const progressBar = entry.target.querySelector('.skill-bar');
+            if (progressBar) {
+                const width = progressBar.getAttribute('data-width');
+                progressBar.style.width = width;
+            }
+            skillsObserver.unobserve(entry.target); // On n'anime qu'une seule fois
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.skill-card').forEach((card) => {
+    skillsObserver.observe(card);
+});

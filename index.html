@@ -63,7 +63,110 @@
         <p class="lang-en">I have expertise in various programming languages and technologies.</p>
         <h2 class="lang-fr">Compétences</h2>
         <p class="lang-fr">J'ai une expertise dans divers langages de programmation et technologies.</p>
-        <!-- Add your skills here -->
+        
+        <div class="skills-container">
+            <!-- Filtres -->
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="lang-en">All</span><span class="lang-fr">Tout</span>
+                </button>
+                <button class="filter-btn" data-filter="dev">
+                    <span class="lang-en">Development</span><span class="lang-fr">Développement</span>
+                </button>
+                <button class="filter-btn" data-filter="ops">
+                    <span class="lang-en">Infrastructure</span><span class="lang-fr">Infrastructure</span>
+                </button>
+                <button class="filter-btn" data-filter="tools">
+                    <span class="lang-en">Tools</span><span class="lang-fr">Outils</span>
+                </button>
+            </div>
+
+            <!-- Grille de compétences -->
+            <div class="skills-grid">
+                <!-- Dev -->
+                <div class="skill-card" data-category="dev">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z" /></svg>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="90%"></div></div>
+                </div>
+                <div class="skill-card" data-category="dev">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,18H4V6H20V18M7.5,17L6.09,15.59L9.67,12L6.09,8.41L7.5,7L12.5,12L7.5,17M18,17H13V15H18V17Z" /></svg>
+                        <h3>Bash / Shell</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="85%"></div></div>
+                </div>
+                <div class="skill-card" data-category="dev">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,18H4V6H20V18M7.5,17L6.09,15.59L9.67,12L6.09,8.41L7.5,7L12.5,12L7.5,17M18,17H13V15H18V17Z" /></svg>
+                        <h3>PowerShell (WPF)</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="80%"></div></div>
+                </div>
+                <div class="skill-card" data-category="dev">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.9 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.66 9.66,10H14.34C14.43,10.66 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,12C8,12.68 8.06,13.34 8.16,14H3.5C3.31,13.36 3.22,12.69 3.22,12C3.22,11.31 3.31,10.64 3.5,10H8.16C8.06,10.66 8,11.32 8,12M5.08,16H8.03C8.35,17.25 8.81,18.45 9.41,19.56C7.57,18.9 6.04,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.1 17.96,6.35 18.92,8M19.74,10H16.36C16.44,9.34 16.5,8.68 16.5,8C16.5,7.32 16.44,6.66 16.36,6H19.74C19.9,6.64 20,7.31 20,8M14.59,4.44C15.19,5.55 15.65,6.75 15.97,8H18.92C17.96,6.35 16.43,5.1 14.59,4.44M5.08,8H8.03C8.35,6.75 8.81,5.55 9.41,4.44C7.57,5.1 6.04,6.35 5.08,8Z" /></svg>
+                        <h3>HTML / CSS / JS</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="75%"></div></div>
+                </div>
+                <div class="skill-card" data-category="dev">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z" /></svg>
+                        <h3>C / C++</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="70%"></div></div>
+                </div>
+
+                <!-- Ops -->
+                <div class="skill-card" data-category="ops">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M4,1H20A1,1 0 0,1 21,2V6A1,1 0 0,1 20,7H4A1,1 0 0,1 3,6V2A1,1 0 0,1 4,1M4,9H20A1,1 0 0,1 21,10V14A1,1 0 0,1 20,15H4A1,1 0 0,1 3,14V10A1,1 0 0,1 4,9M4,17H20A1,1 0 0,1 21,18V22A1,1 0 0,1 20,23H4A1,1 0 0,1 3,22V18A1,1 0 0,1 4,17M9,5H10V3H9V5M9,13H10V11H9V13M9,21H10V19H9V21Z" /></svg>
+                        <h3>Linux (Debian)</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="95%"></div></div>
+                </div>
+                <div class="skill-card" data-category="ops">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.35 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.35 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.04 4.95,18.95L7.44,17.95C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.04 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" /></svg>
+                        <h3>Ansible / Puppet</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="70%"></div></div>
+                </div>
+                <div class="skill-card" data-category="ops">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M19,20H4C2.89,20 2,19.1 2,18V6C2,4.89 2.89,4 4,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20M4,6V18H19V6H4M7,15V13H17V15H7M7,11V9H17V11H7Z" /></svg>
+                        <h3>Virtualization (VMware/VBox)</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="85%"></div></div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" /></svg>
+                        <h3>Git</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="90%"></div></div>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19M11,17H13V7H11V17M7,17H9V11H7V17M15,17H17V13H15V17Z" /></svg>
+                        <h3>Jira</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="80%"></div></div>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-header">
+                        <svg class="skill-icon" viewBox="0 0 24 24"><path d="M9,2V4H7V2H5V4H3V6H5V8H3V10H5V12H3V14H5V16H3V18H5V20H7V22H9V20H11V22H13V20H15V22H17V20H19V18H17V16H19V14H17V12H19V10H17V8H19V6H17V4H15V2H13V4H11V2H9M7,6H17V18H7V6Z" /></svg>
+                        <h3>Electronics (Kicad)</h3>
+                    </div>
+                    <div class="skill-bar-container"><div class="skill-bar" data-width="65%"></div></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Experiences section -->
