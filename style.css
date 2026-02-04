@@ -472,6 +472,12 @@ form input, form textarea {
     transition: border-color 0.3s;
 }
 
+form textarea {
+    resize: none;
+    overflow-y: auto;
+    height: 150px;
+}
+
 form input:focus, form textarea:focus {
     outline: none;
     border-color: var(--accent-color);
