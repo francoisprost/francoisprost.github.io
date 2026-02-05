@@ -419,6 +419,93 @@ h2::after {
     font-size: 0.8rem;
 }
 
+/* Projects section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #333;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+}
+
+.project-preview {
+    height: 180px;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+}
+
+.project-preview svg {
+    width: 64px;
+    height: 64px;
+    fill: var(--text-muted);
+    transition: fill 0.3s ease;
+}
+
+.project-card:hover .project-preview svg {
+    fill: var(--accent-color);
+}
+
+.project-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
 /* Contact section */
 #contact {
     padding-bottom: 50px;
@@ -645,4 +732,30 @@ html[lang="fr"] .lang-en { display: none !important; }
 
 .modal.hide .modal-content {
     animation: slideOut 0.3s ease-in forwards;
+}
+
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+.modal-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }

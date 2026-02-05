@@ -26,9 +26,11 @@
         <a href="#home" class="lang-en">Home</a>
         <a href="#skills" class="lang-en">Skills</a>
         <a href="#experiences" class="lang-en">Experiences</a>
+        <a href="#projects" class="lang-en">Projects</a>
         <a href="#home" class="lang-fr">Accueil</a>
         <a href="#skills" class="lang-fr">Compétences</a>
         <a href="#experiences" class="lang-fr">Expériences</a>
+        <a href="#projects" class="lang-fr">Projets</a>
         <a href="#contact">Contact</a>
         <div class="lang-dropdown">
             <button onclick="toggleLangMenu()" class="lang-dropbtn" title="Changer de langue">
@@ -322,6 +324,49 @@
         </div>
     </section>
 
+    <!-- Projects section -->
+    <section id="projects">
+        <h2 class="lang-en">Personal Projects</h2>
+        <h2 class="lang-fr">Projets Personnels</h2>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="openModal('project1')">
+                <div class="project-preview">
+                    <!-- Replace with <img src="images/project1.jpg"> if available -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <div class="project-info">
+                    <h3 class="lang-en">Project Name 1</h3>
+                    <h3 class="lang-fr">Nom du Projet 1</h3>
+                    <p class="lang-en">A brief description of this personal project to catch attention.</p>
+                    <p class="lang-fr">Une brève description de ce projet personnel pour attirer l'attention.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>IoT</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" onclick="openModal('project2')">
+                <div class="project-preview">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9v-2h6v2zm-3-7c-1.38 0-2.5-1.12-2.5-2.5S10.62 6 12 6s2.5 1.12 2.5 2.5S13.38 11 12 11z"/></svg>
+                </div>
+                <div class="project-info">
+                    <h3 class="lang-en">Project Name 2</h3>
+                    <h3 class="lang-fr">Nom du Projet 2</h3>
+                    <p class="lang-en">Another interesting project description highlighting key features.</p>
+                    <p class="lang-fr">Une autre description de projet intéressante mettant en avant les fonctionnalités clés.</p>
+                    <div class="project-tags">
+                        <span>Web</span>
+                        <span>React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact section -->
     <section id="contact">
         <h2>Contact</h2>
@@ -366,6 +411,60 @@
     </script>
 
     <!-- Modals -->
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project1')">&times;</span>
+            <!-- English Content -->
+            <div class="lang-en">
+                <h2>Project Name 1</h2>
+                <p><strong>Technologies:</strong> Python, IoT, Raspberry Pi</p>
+                <p>Detailed description of the project. Explain the problem you solved, the architecture you chose, and the results obtained.</p>
+                <p>You can add links to the source code or a live demo here.</p>
+                <a href="https://github.com/francoisprost" target="_blank" class="modal-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+            <!-- French Content -->
+            <div class="lang-fr">
+                <h2>Nom du Projet 1</h2>
+                <p><strong>Technologies :</strong> Python, IoT, Raspberry Pi</p>
+                <p>Description détaillée du projet. Expliquez le problème résolu, l'architecture choisie et les résultats obtenus.</p>
+                <p>Vous pouvez ajouter des liens vers le code source ou une démo ici.</p>
+                <a href="https://github.com/francoisprost" target="_blank" class="modal-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    Voir sur GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project2')">&times;</span>
+            <!-- English Content -->
+            <div class="lang-en">
+                <h2>Project Name 2</h2>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React</p>
+                <p>Detailed description of the second project. Highlight your specific contributions and the technical challenges.</p>
+                <a href="https://github.com/francoisprost" target="_blank" class="modal-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View on GitHub
+                </a>
+            </div>
+            <!-- French Content -->
+            <div class="lang-fr">
+                <h2>Nom du Projet 2</h2>
+                <p><strong>Technologies :</strong> HTML, CSS, JavaScript, React</p>
+                <p>Description détaillée du second projet. Mettez en avant vos contributions spécifiques et les défis techniques.</p>
+                <a href="https://github.com/francoisprost" target="_blank" class="modal-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    Voir sur GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div id="privacyModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('privacyModal')">&times;</span>
