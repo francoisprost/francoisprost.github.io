@@ -44,6 +44,16 @@ window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         closeModalWithAnimation(event.target);
     }
+
+    // Gestion fermeture menu mobile au clic extérieur
+    const mobileMenu = document.querySelector('.right-align');
+    const mobileToggle = document.querySelector('.menu-toggle');
+    if (mobileMenu && mobileMenu.classList.contains('active')) {
+        if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+            mobileToggle.classList.remove('is-active');
+            mobileMenu.classList.remove('active');
+        }
+    }
 }
 
 function openModal(modalId) {
@@ -164,3 +174,21 @@ const skillsObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-card').forEach((card) => {
     skillsObserver.observe(card);
 });
+
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.right-align');
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('is-active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.right-align > a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('is-active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
