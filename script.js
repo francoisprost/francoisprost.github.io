@@ -26,6 +26,7 @@ function handleNavbarShrink() {
 // Fonction pour changer la langue
 function toggleLangMenu() {
     document.getElementById("langDropdown").classList.toggle("show");
+    document.querySelector(".lang-dropbtn").classList.toggle("active");
 }
 
 // Fermer le menu ou les modales si on clique ailleurs
@@ -37,6 +38,10 @@ window.onclick = function(event) {
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
             }
+        }
+        const dropBtn = document.querySelector(".lang-dropbtn");
+        if (dropBtn && dropBtn.classList.contains('active')) {
+            dropBtn.classList.remove('active');
         }
     }
 
@@ -78,6 +83,7 @@ function switchLang(lang) {
     document.documentElement.lang = lang;
     localStorage.setItem('lang', lang); // Sauvegarde le choix
     document.getElementById("langDropdown").classList.remove("show");
+    document.querySelector(".lang-dropbtn").classList.remove("active");
 }
 
 // Initialisation au chargement de la page
