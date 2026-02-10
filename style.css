@@ -216,11 +216,19 @@ h2::after {
     #home {
         flex-direction: column;
         text-align: center;
+        justify-content: flex-start;
+        padding-top: 130px;
+        gap: 5px;
     }
     .home-photo img {
         width: 200px;
         height: 200px;
+        width: 180px;
+        height: 180px;
     }
+    #home h1 { font-size: 2.5rem; }
+    #home h3 { font-size: 1.5rem; }
+    #home p { font-size: 1rem; padding: 0 15px; }
 }
 
 /* Skills section */
